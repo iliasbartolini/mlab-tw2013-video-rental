@@ -18,8 +18,8 @@ public class CustomerTest {
     private Customer dinsdale = new Customer("Dinsdale Pirhana");
 
     private Movie python = new Movie("Monty Python and the Holy Grail", Movie.REGULAR);
-	private Movie ran = new Movie("Ran", Movie.REGULAR);
-	private Movie la = new Movie("LA Confidential", Movie.NEW_RELEASE);
+	private Movie ran = new Movie("Ran",Movie.REGULAR);
+	private Movie la = new Movie("LA Confidential",Movie.NEW_RELEASE);
 	private Movie trek = new Movie("Star Trek 13.2", Movie.NEW_RELEASE);
 	private Movie wallace = new Movie("Wallace and Gromit", Movie.CHILDRENS);
 
@@ -31,6 +31,12 @@ public class CustomerTest {
        dinsdale.addRental(new Rental (trek, 1));
        dinsdale.addRental(new Rental (wallace, 6));
    }
+
+	@Test
+    public void testLa() throws Exception {
+		assertEquals(6.0,la.getAmount(2),0.1);
+	}
+	
 
 	@Test
     public void testEmpty() throws Exception {
