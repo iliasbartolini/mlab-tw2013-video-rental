@@ -16,9 +16,7 @@ public class Rental {
     }
 
 	public double calculateAmount() {
-		double thisAmount = 0;
-		thisAmount += movie.getAmount(daysRented);
-		return thisAmount;
+		return movie.getAmount(daysRented);
 	}
 
 	public String getTitle() {
